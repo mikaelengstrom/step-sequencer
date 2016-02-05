@@ -46,13 +46,7 @@ export class NoiseMachine {
     }
 
     setByStep(step) {
-        console.log(step.frequency);
         this.osc1.frequency.value = step.frequency;
-    }
-
-    doSomeNoise() {
-        console.log(this.context);
-        console.log('noise...');
     }
 }
 

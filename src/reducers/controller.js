@@ -3,6 +3,7 @@ export default function controller(state = {
     tempo: 120,
     currentTick: 0,
 }, action){
+    console.log(action);
     switch (action.type) {
         case 'PLAY':
             return {
@@ -14,6 +15,18 @@ export default function controller(state = {
             return {
                 ...state,
                 isPlaying: false
+            }
+
+        case 'TEMPO_DECREASE':
+            return {
+                ...state,
+                tempo: state.tempo - 2
+            }
+
+        case 'TEMPO_INCREASE':
+            return {
+                ...state,
+                tempo: state.tempo + 2
             }
 
         case 'NEXT_TICK':

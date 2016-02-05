@@ -18,11 +18,10 @@ let store = createStore(reducer);
 // Noise machine //
 let noiseMachine = new NoiseMachine(store);
 
-noiseMachine.doSomeNoise();
-
 // Timer //
 let timer = false;
 function startTimer() {
+    let state = store.getState();
     timer = setInterval(function() {
         store.dispatch(nextTick());
     }, 80)

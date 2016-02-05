@@ -1,3 +1,14 @@
+export const decreaseTempo = (tempo) => {
+    return {
+        type: 'TEMPO_DECREASE',
+    }
+}
+
+export const increaseTempo = (tempo) => {
+    return {
+        type: 'TEMPO_INCREASE',
+    }
+}
 
 export const decreaseDetune = (id, detune) => {
     return {
